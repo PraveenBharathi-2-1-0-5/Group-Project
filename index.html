@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitZone | Fitness Club</title>
+
+    <link href="./src/output.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body class="bg-white text-[#202020]">
+
+    <!-- Navbar -->
+    
+<!-- Navbar -->
+<header class="flex items-center justify-between px-6 md:px-16 py-5 border-b border-gray-100 relative">
+
+    <h1 class="text-2xl font-extrabold tracking-tight">
+        Fit<span class="text-orange-500">Zone.</span>
+    </h1>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="index.html" class="text-orange-500">Home</a>
+        <a href="about.html" class="hover:text-orange-500">About</a>
+        <a href="package.html" class="hover:text-orange-500">Packages</a>
+        <a href="Gallery.html" class="hover:text-orange-500">Gallery</a>
+        <a href="contact.html" class="hover:text-orange-500">Contact</a>
+      
+    </nav>
+
+    <div class="flex items-center gap-4">
+
+        <a href="package.html"
+           class="bg-orange-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-orange-600">
+            Join Now
+        </a>
+
+        <!-- Hamburger -->
+        <button id="menuBtn" class="md:hidden text-2xl">
+            ☰
+        </button>
+
+    </div>
+
+    <!-- Mobile Navigation -->
+  <div id="side-navbar"
+    class="fixed top-0 left-0 bg-[#080808] text-white w-64 h-full z-50 p-6 transition-transform duration-300 -translate-x-full">
+
+    <!-- Close Button -->
+      <p class="text-right">
+        <i id="side-navbar-close"
+            class="fa-solid fa-xmark cursor-pointer text-xl"
+            role="button"
+            tabindex="0">
+        </i>
+      </p>
+
+      <!-- Sidebar Links -->
+    <div class="flex flex-col gap-6 mt-8">
+
+        <p><a href="./index.html">Home</a></p>
+
+        <p><a href="About.html">About</a></p>
+
+        <p><a href="package.html">packages</a></p>
+
+        <p><a href="Gallery.html">Gallery</a></p>
+
+        <p><a href="Conact.html">Contact</a></p>
+
+        
+
+    </div>
+ </div>
+
+</header>
+
+
+
+    <!-- Hero Section -->
+    <section class="px-6 md:px-16 py-16 md:py-24">
+
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- Hero Content -->
+            <div>
+
+                <p class="text-orange-500 uppercase tracking-widest text-sm font-bold mb-5">
+                    Welcome to FitZone
+                </p>
+
+                <h2 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                    Build Your
+                    <span class="text-orange-500">Strength.</span>
+                    Shape Your Future.
+                </h2>
+
+                <p class="text-gray-500 mt-6 leading-7 max-w-md">
+                    Your fitness journey starts here. Train smarter,
+                    stay stronger and become the best version of yourself
+                    with FitZone.
+                </p>
+
+                <div class="flex gap-4 mt-8 flex-wrap">
+
+                    <a href="package.html"  id="getStarted"
+                       class="bg-orange-500 text-white px-7 py-3 rounded-full font-semibold hover:bg-orange-600">
+                        Get Started
+                    </a>
+
+                    <a href="about.html"
+                       class="border border-gray-300 px-7 py-3 rounded-full font-semibold hover:bg-gray-100">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Image -->
+            <div>
+                <img
+                    src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1000"
+                    alt="Modern gym interior"
+                    class="w-full h-[350px] md:h-[480px] object-cover rounded-2xl"
+                >
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="bg-gray-50 px-6 md:px-16 py-16">
+
+        <div class="max-w-7xl mx-auto text-center">
+
+            <p class="text-orange-500 uppercase tracking-widest text-sm font-bold">
+                About Us
+            </p>
+
+            <h2 class="text-3xl md:text-4xl font-bold mt-3">
+                More Than Just A Gym
+            </h2>
+
+            <p class="text-gray-500 max-w-2xl mx-auto mt-5 leading-7">
+                At FitZone, we believe fitness is a lifestyle.
+                Our modern facilities, supportive trainers and
+                welcoming environment help you work towards
+                your personal fitness goals.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="px-6 md:px-16 py-20">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center mb-12">
+
+                <p class="text-orange-500 uppercase tracking-widest text-sm font-bold">
+                    What We Offer
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold mt-3">
+                    Our Fitness Services
+                </h2>
+
+            </div>
+
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-7">
+
+                <!-- Service 1 -->
+                <div class="border border-gray-200 rounded-xl p-7 hover:shadow-lg transition">
+
+                    <div class="text-4xl mb-5">🏋️</div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Weight Training
+                    </h3>
+
+                    <p class="text-gray-500 leading-7">
+                        Build strength and improve your fitness
+                        with dedicated weight training sessions.
+                    </p>
+
+                </div>
+
+
+                <!-- Service 2 -->
+                <div class="border border-gray-200 rounded-xl p-7 hover:shadow-lg transition">
+
+                    <div class="text-4xl mb-5">🏃</div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Cardio Training
+                    </h3>
+
+                    <p class="text-gray-500 leading-7">
+                        Improve endurance and enjoy energetic
+                        cardio workouts.
+                    </p>
+
+                </div>
+
+
+                <!-- Service 3 -->
+                <div class="border border-gray-200 rounded-xl p-7 hover:shadow-lg transition">
+
+                    <div class="text-4xl mb-5">🤸</div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Personal Training
+                    </h3>
+
+                    <p class="text-gray-500 leading-7">
+                        Get guidance and support from our
+                        experienced fitness trainers.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Call To Action -->
+    <section class="px-6 md:px-16 pb-20">
+
+        <div class="max-w-7xl mx-auto bg-[#202020] rounded-2xl p-10 md:p-16 text-center text-white">
+
+            <h2 class="text-3xl md:text-4xl font-bold">
+                Ready to Start Your Fitness Journey?
+            </h2>
+
+            <p class="text-gray-400 mt-4">
+                Take the first step towards a healthier lifestyle.
+            </p>
+
+            <a href="package.html"
+               class="inline-block bg-orange-500 text-white px-8 py-3 rounded-full mt-7 font-semibold hover:bg-orange-600">
+                Explore Membership
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-[#202020] text-white px-6 md:px-16 py-10">
+
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6">
+
+            <div>
+                <h2 class="text-2xl font-extrabold">
+                    Fit<span class="text-orange-500">Zone.</span>
+                </h2>
+
+                <p class="text-gray-400 text-sm mt-3">
+                    Train Hard. Stay Strong.
+                </p>
+            </div>
+
+
+            <div class="flex gap-6 text-sm text-gray-400 flex-wrap">
+                <a href="index.html" class="hover:text-orange-500">Home</a>
+                <a href="about.html" class="hover:text-orange-500">About</a>
+                <a href="membership.html" class="hover:text-orange-500">Packages</a>
+                <a href="Gallery.html" class="hover:text-orange-500">Gallery</a>
+                <a href="contact.html" class="hover:text-orange-500">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-sm">
+            © 2026 FitZone. All rights reserved.
+        </div>
+
+    </footer>
+
+    
+
+<script>
+
+
+
+
+
+
+// Welcome Message
+const getStarted = document.getElementById("getStarted");
+
+getStarted.addEventListener("click", function () {
+
+    alert("Welcome to FitZone! Let's start your fitness journey.");
+
+});
+
+
+
+
+
+
+
+
+
+    // Mobile Sidebar
+const menuBtn = document.getElementById("menuBtn");
+const sideNavbar = document.getElementById("side-navbar");
+const closeBtn = document.getElementById("side-navbar-close");
+
+// Open Sidebar
+menuBtn.addEventListener("click", function() {
+    sideNavbar.classList.remove("-translate-x-full");
+});
+
+// Close Sidebar
+closeBtn.addEventListener("click", function() {
+    sideNavbar.classList.add("-translate-x-full");
+});
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
