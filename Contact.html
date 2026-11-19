@@ -16,26 +16,26 @@
 
 <body class="bg-white text-[#202020]">
 
-    <!-- Navbar -->
-    <header class="flex items-center justify-between px-6 md:px-16 py-5 border-b border-gray-100 relative">
+    
+    <header class="flex items-center justify-between px-6 md:px-16 py-5 border-b border-gray-100 ">
 
         <h1 class="text-2xl font-extrabold">
             Fit<span class="text-orange-500">Zone.</span>
         </h1>
 
-        <!-- Desktop Navigation -->
+        
         <nav class="hidden md:flex gap-8 text-sm font-medium">
             <a href="index.html" class="hover:text-orange-500">Home</a>
-            <a href="about.html" class="hover:text-orange-500">About</a>
+            
             <a href="package.html" class="hover:text-orange-500">Packages</a>
-            <a href="Gallery.html" class="hover:text-orange-500">Gallery</a>
+           
             <a href="contact.html" class="text-orange-500">Contact</a>
         </nav>
 
         <div class="flex items-center gap-4">
 
             <a href="package.html"
-                class="bg-orange-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-orange-600 hidden">
+                class="bg-orange-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-orange-600 ">
                 Join Now
             </a>
 
@@ -45,7 +45,6 @@
 
         </div>
 
-        <!-- Mobile Sidebar -->
         <div id="side-navbar"
             class="fixed top-0 left-0 bg-[#202020] text-white w-64 h-full z-50 p-6 transition-transform duration-300 -translate-x-full">
 
@@ -66,7 +65,7 @@
     </header>
 
 
-    <!-- Hero Section -->
+    
     <section class="bg-[#202020] text-white px-6 py-16 md:py-20 text-center">
 
         <p class="text-orange-500 uppercase tracking-widest text-sm font-bold">
@@ -85,7 +84,7 @@
     </section>
 
 
-    <!-- Contact Section -->
+    
     <section class="px-6 md:px-16 py-16">
 
       
@@ -94,7 +93,7 @@
            
 
 
-            <!-- Contact Form -->
+           
             <div class="bg-gray-50 p-7 md:p-10 rounded-2xl">
 
                 <h2 class="text-2xl font-bold mb-6">
@@ -166,7 +165,7 @@
     </section>
 
 
-    <!-- Footer -->
+    
     <footer class="bg-[#202020] text-white px-6 md:px-16 py-10">
 
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6">
@@ -183,25 +182,25 @@
 
             <div class="flex gap-6 text-sm text-gray-400 flex-wrap">
                 <a href="index.html" class="hover:text-orange-500">Home</a>
-                <a href="about.html" class="hover:text-orange-500">About</a>
+              
                 <a href="package.html" class="hover:text-orange-500">Packages</a>
-                  <a href="Gallery.html" class="hover:text-orange-500">Gallery</a>
+                  
                 <a href="contact.html" class="hover:text-orange-500">Contact</a>
             </div>
 
         </div>
 
         <div class="max-w-7xl mx-auto border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-sm">
-            © <span id="year"></span> FitZone. All rights reserved.
+            ©  FitZone 2026. All rights reserved.
         </div>
 
     </footer>
 
 
-    <!-- JavaScript -->
+    
     <script>
 
-        // Mobile Sidebar
+       
         const menuBtn = document.getElementById("menuBtn");
         const sideNavbar = document.getElementById("side-navbar");
         const closeBtn = document.getElementById("side-navbar-close");
@@ -215,7 +214,6 @@
         });
 
 
-        // Contact Form
         const contactForm = document.getElementById("contactForm");
 
         contactForm.addEventListener("submit", function (event) {
@@ -227,9 +225,7 @@
         });
 
 
-        // Copyright Year
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
+       
 
     </script>
 
