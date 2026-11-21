@@ -316,6 +316,113 @@
     </section>
 
 
+    
+
+    <section class="bg-gray-50 px-6  md:px-16 py-20">
+
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-15">
+
+            <!-- Left Side -->
+
+            <div class="flex-1">
+
+                <p class="text-orange-500 text-sm font-bold tracking-widest">
+                    FITNESS STARTS HERE
+                </p>
+
+                <h1 class="text-4xl md:text-5xl font-bold mt-5 mb-5 text-gray-900">
+                    Know Your <span class="text-orange-500">BMI</span>
+                </h1>
+
+                <p class="text-gray-500 leading-7 text-base">
+                    Understand your body better.
+                    Calculate your Body Mass Index
+                    and take your first step towards fitness.
+                </p>
+
+                <div class="mt-8 border-l-4 border-orange-500 p-5 bg-white rounded-lg shadow-sm">
+
+                    <h3 class="font-bold text-lg mb-3 text-gray-900">
+                        What is BMI?
+                    </h3>
+
+                    <p class="text-gray-500 leading-7">
+                        BMI stands for Body Mass Index.
+                        It helps to understand whether
+                        your weight is appropriate for
+                        your height.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Right Side -->
+
+            <div class="flex-1 w-full max-w-md bg-white p-8 md:p-9 rounded-2xl shadow-md border border-gray-200">
+
+                <h2 class="text-orange-500 text-2xl font-bold mb-3">
+                    BMI Calculator
+                </h2>
+
+                <p class="text-gray-500 mb-6">
+                    Enter your details below
+                </p>
+
+
+                <!-- Weight Input -->
+
+                <div class="mb-5">
+
+                    <label for="weight" class="block text-sm mb-2 text-gray-700 font-medium">
+                        Weight (kg)
+                    </label>
+
+                    <input type="number" id="weight" placeholder="Enter your weight"
+                        class="w-full p-3 border border-gray-300 rounded-md bg-gray-50 text-gray-900 outline-none focus:border-orange-500">
+
+                </div>
+
+
+                <!-- Height Input -->
+
+                <div class="mb-5">
+
+                    <label for="height" class="block text-sm mb-2 text-gray-700 font-medium">
+                        Height (cm)
+                    </label>
+
+                    <input type="number" id="height" placeholder="Enter your height"
+                        class="w-full p-3 border border-gray-300 rounded-md bg-gray-50 text-gray-900 outline-none focus:border-orange-500">
+
+                </div>
+
+
+                <!-- Calculate Button -->
+
+                <button onclick="calculateBMI()"
+                    class="w-full p-3.5 bg-orange-500 text-white rounded-md font-bold text-base hover:bg-orange-600 transition cursor-pointer">
+                    Calculate BMI
+                </button>
+
+
+                <!-- Result -->
+
+                <div id="result"
+                    class="mt-6 p-4 bg-gray-50 rounded-lg text-center leading-7 text-gray-700 border border-gray-200">
+
+                    <p>Your BMI result will appear here</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
 
     
 
@@ -360,53 +467,111 @@
         </div>
 
     </footer>
+    <script>
 
     
 
-<script>
 
-
-
-
-
-
+// Get Started button
 
 const getStarted = document.getElementById("getStarted");
 
 getStarted.addEventListener("click", function () {
-
     alert("Welcome to FitZone! Let's start your fitness journey.");
-
 });
 
 
+// Mobile Sidebar
 
-
-
-
-
-
-
-    
 const menuBtn = document.getElementById("menuBtn");
+
 const sideNavbar = document.getElementById("side-navbar");
+
 const closeBtn = document.getElementById("side-navbar-close");
 
 
-menuBtn.addEventListener("click", function() {
+menuBtn.addEventListener("click", function () {
     sideNavbar.classList.remove("-translate-x-full");
 });
 
 
-closeBtn.addEventListener("click", function() {
+closeBtn.addEventListener("click", function () {
     sideNavbar.classList.add("-translate-x-full");
 });
 
 
+// BMI Calculator
+
+function calculateBMI() {
+
+    var weight = Number(document.getElementById("weight").value);
+
+    var height = Number(document.getElementById("height").value);
+
+    var result = document.getElementById("result");
 
 
+    // Validate inputs
 
-    </script>
+    if (weight <= 0 || height <= 0 || !Number.isFinite(weight) || !Number.isFinite(height)) {
+
+        result.innerHTML = "Please enter valid height and weight";
+
+        return;
+    }
+
+
+    // Convert height into meters
+
+    height = height / 100;
+
+
+    // Calculate BMI
+
+    var bmi = weight / (height * height);
+
+    bmi = bmi.toFixed(1);
+
+
+    // Find BMI category
+
+    var category;
+
+    if (bmi < 18.5) {
+
+        category = "Underweight";
+
+    }
+
+    else if (bmi < 25) {
+
+        category = "Normal Weight";
+
+    }
+
+    else if (bmi < 30) {
+
+        category = "Overweight";
+
+    }
+
+    else {
+
+        category = "Obesity";
+
+    }
+
+
+    // Display result
+
+    result.innerHTML = `
+        <h3>Your BMI: ${bmi}</h3>
+        <p>Category: ${category}</p>
+    `;
+
+}
+</script>
+
 
 
 </body>
