@@ -1,5 +1,7 @@
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +49,7 @@
 
     
   <div id="side-navbar"
-    class="fixed top-0 left-0 bg-[#080808] text-white w-64 h-full z-50 p-6 transition-transform duration-300 -translate-x-full">
+    class="fixed top-0 left-0 bg-[#da642a] text-white w-64 h-full z-50 p-6 transition-transform duration-300 -translate-x-full">
 
    
       <p class="text-right">
@@ -184,10 +186,9 @@
                     <li>✓ Locker facility</li>
                 </ul>
 
-                <a href="contact.html"
-                    class="block text-center border border-orange-500 text-orange-500 rounded-full py-2.5 mt-7 hover:bg-orange-500 hover:text-white">
-                    Select Plan
-                </a>
+                <button class="select-plan bg-orange-500 text-white px-5 py-2 rounded-lg mt-6">
+    Select Plan
+</button>
 
             </div>
 
@@ -215,10 +216,9 @@
                     <li>✓ Group sessions</li>
                 </ul>
 
-                <a href="contact.html"
-                    class="block text-center border border-orange-500 text-orange-500 rounded-full py-2.5 mt-7 hover:bg-orange-500 hover:text-white">
-                    Select Plan
-                </a>
+                <button class="select-plan bg-orange-500 text-white px-5 py-2 rounded-lg mt-6">
+    Select Plan
+</button>
 
             </div>
 
@@ -248,10 +248,9 @@
                     <li>✓ Progress tracking</li>
                 </ul>
 
-                 <a href="contact.html"
-                    class="block text-center border border-orange-500 text-orange-500 rounded-full py-2.5 mt-7 hover:bg-orange-500 hover:text-white">
-                    Select Plan
-                </a>
+                 <button class="select-plan bg-orange-500 text-white px-5 py-2 rounded-lg mt-6">
+    Select Plan
+</button>
 
             </div>
 
@@ -279,10 +278,9 @@
                     <li>✓ Monthly consultation</li>
                 </ul>
 
-                <a href="contact.html"
-                    class="block text-center border border-orange-500 text-orange-500 rounded-full py-2.5 mt-7 hover:bg-orange-500 hover:text-white">
-                    Select Plan
-                </a>
+                <button class="select-plan bg-orange-500 text-white px-5 py-2 rounded-lg mt-6">
+    Select Plan
+</button>
 
             </div>
 
@@ -421,18 +419,42 @@
 const sideNavbar = document.getElementById("side-navbar");
 const closeBtn = document.getElementById("side-navbar-close");
 
-// Open Sidebar
+
 menuBtn.addEventListener("click", function() {
     sideNavbar.classList.remove("-translate-x-full");
 });
 
-// Close Sidebar
+
 closeBtn.addEventListener("click", function() {
     sideNavbar.classList.add("-translate-x-full");
+});
+
+
+
+
+var selectButtons = document.querySelectorAll(".select-plan");
+
+selectButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+       
+        selectButtons.forEach(function(btn) {
+            btn.innerHTML = "Select Plan";
+            btn.classList.remove("bg-green-600");
+            btn.classList.add("bg-orange-500");
+        });
+
+        
+        button.innerHTML = "Selected ✓";
+        button.classList.remove("bg-orange-500");
+        button.classList.add("bg-green-600");
+
+    });
+
 });
 
     </script>
 
 </body>
 </html>
-
